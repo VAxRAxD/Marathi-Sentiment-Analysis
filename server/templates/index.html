@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Marathi</title>
+    <style>
+        input{
+            height: 25px;
+            width: 500px;
+            border-radius: 15px;
+        }
+        input[type="text"]::placeholder {
+            text-align: center;
+        }
+        button{
+            height: 25px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <center><h2 style="margin-top: 150px;">Marathi Language Sentiment Analysis</h2></center><br>
+    <center><input type="text" id="data" placeholder="Enter a text in Marathi"><br><br></center>
+    <center><button type="button" onclick="Submit()">Upload and Analyse</button></center>
+    <br><br>
+    <center><div id="response"></div></center>
+    <br><br>
+    <center><button style="display: none;" id="reload" type="button" onclick="location.reload()">Try New Sentence</button></center>
+    <script>
+        function Submit() {
+            var txt=document.getElementById("data").value; 
+            const formData = new FormData();
+            formData.append("data",txt);   
+            fetch("/", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                const responseDiv = document.getElementById("response");
+                var sentiment=JSON.parse(data)
+                var result=sentiment["sentiment"]
+                if (result=="0"){
+                    var emoji="❓"
+                }
+                else if(result=="1"){
+                    var emoji="👍🏽"
+                }
+                else{
+                    var emoji="👎🏽"
+                }
+                responseDiv.innerHTML = `<h1>${emoji}</h1>`;
+                document.getElementById("reload").style.display="inline";
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        }
+    </script>
+
+</body>
+</html>
