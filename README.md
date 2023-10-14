@@ -1,4 +1,5 @@
 # Marathi-Sentiment-Analysis
-![10101](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/6e9e6996-c64a-478e-89d8-e7e98a44a204)  
-![20202](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/b4896975-c63b-4d5f-958f-fd2001e9bcbb)  
-![30303](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/86ea28dd-2ae8-4687-bc43-0a1a05074d25)
+![image10](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/0b9823ce-d40c-4e08-bf79-4a0faca80830)
+![image16](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/ffa80bb9-3b07-488b-9f29-26435b2750ba)
+![image6](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/60e02ccc-9c8d-4052-94a9-a4422febe130)
+![image5](https://github.com/VAxRAxD/Marathi-Sentiment-Analysis/assets/67188972/a5919022-be79-45f3-b8a5-f9336130e882)
